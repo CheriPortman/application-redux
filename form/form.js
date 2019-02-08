@@ -1,9 +1,17 @@
-const form = document.getElementById('form');
 const name = document.getElementById('name');
 const wishName = document.getElementById('wish-name');
 
 document.addEventListener('submit', function(event) {
     event.preventDefault();
-    console.log('clicked');
-    console.log(wishName.value);
+
+    const submission = {
+        name: name.value,
+        wishName: wishName.value
+    };
+
+    const strungSubmission = JSON.stringify(submission);
+
+    window.localStorage.setItem('submission', strungSubmission);
+
+    console.log(strungSubmission);
 });
