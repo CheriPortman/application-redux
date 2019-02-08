@@ -1,0 +1,10 @@
+main {
+    margin: 20px;
+}
+
+#form {
+    border: 5px solid rgb(193, 169, 121);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+}
