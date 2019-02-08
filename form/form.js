@@ -10,8 +10,7 @@ document.addEventListener('submit', function(event) {
     };
 
     const strungSubmission = JSON.stringify(submission);
-
     window.localStorage.setItem('submission', strungSubmission);
-
-    console.log(strungSubmission);
+    //at this point I have a single submission in local storage
+    
 });
