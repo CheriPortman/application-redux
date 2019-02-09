@@ -1,3 +1,17 @@
+body {
+    background: url(./assets/patrick-fore-557732-unsplash.jpg) 
+        no-repeat center center fixed;
+    background-size: 100%;
+    font-family: 'Concert One', cursive;
+}
+
+h1 {
+    text-align: center;
+    font-size: 72px;
+    color: #40c0cb;
+    opacity: .5;
+}
+
 main {
     margin: 20px;
 }

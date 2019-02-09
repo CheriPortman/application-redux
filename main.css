@@ -4,21 +4,23 @@
 }
 
 body {
-    background-color: rgb(144, 107, 89);
+    background-color: #00a8c6;
 }
 
 nav {
-    background-color: rgb(232, 172, 50);
+    background-color: #f9f2e7;
+    border: 5px solid #8fbe00;
+    border-radius: 5px;
     padding: 20px;
 }
 
 nav a {
-    color: rgb(193, 169, 121);
+    color: #00a8c6;
     padding: 5px;
     margin: 10px;
-    border: 2px solid black;
+    border: 2px solid #40c0cb;
     border-radius: 5px;
-    background-color: rgb(144, 107, 89);
+    background-color: #aee239;
     text-decoration: none;
 }
 

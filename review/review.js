@@ -15,4 +15,3 @@ wishName.textContent = submission.wishName;
 //what do I want to do...
 //i have my data showing on the review page
 //i want to do what?
-//make two link buttons: accept input, redo inut
