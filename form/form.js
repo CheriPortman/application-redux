@@ -18,6 +18,9 @@ document.addEventListener('submit', function(event) {
     }
     submissions.push(submission);
 
+    const strungSubmission = JSON.stringify(submission);
+    window.localStorage.setItem('submission', strungSubmission);
+
     const strungSubmissions = JSON.stringify(submissions);
     window.localStorage.setItem('submissions', strungSubmissions);
 });
