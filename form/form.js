@@ -1,6 +1,8 @@
 const name = document.getElementById('name');
 const wishName = document.getElementById('wish-name');
 
+let submissions = [] ;
+
 document.addEventListener('submit', function(event) {
     event.preventDefault();
     
@@ -8,27 +10,35 @@ document.addEventListener('submit', function(event) {
         name: name.value,
         wishName: wishName.value
     };
-
     console.log('submission', submission);
+    
+    const jsonSubmissions = window.localStorage.getItem('submissions');
 
-    const strungSubmission = JSON.stringify(submission);
-    window.localStorage.setItem('submission', strungSubmission);
-    //at this point I have a single submission in local storage
-
-    let submissions = null;
+//step by step get local storage parsed and console.logged appropriately
 
 
 
 
+    submissions.push(submission);
+    console.log('submissions', submissions);
 
-//current task: get submission pushed into an object submissions 
-    //happens before any stringifying.
-        //first, need to check to see if there is an object submissions. 
-            //if so, grab that object and parse it.
-            //then, current submission is pushed to the submissions array
-    //at this point, I should be able to 
-        //console.log('submissions', submissions);
-        //and get the JS side of data.
-    //stringify and setItem.
 
+    // console.log('jsonSubmissions', jsonSubmissions);
+    // let submissions = [];
+
+    // if(jsonSubmissions) {
+    //     submissions = JSON.parse(jsonSubmissions);
+    // }
+
+    
+    // const strungSubmissions = JSON.stringify(submissions);
+    // window.localStorage.setItem('submissions', strungSubmissions);
+    
+    // const strungSubmissions = JSON.stringify(submissions);
+
+    // console.log('strungSubmissions', strungSubmissions);
+
+    // window.localStorage.setItem('submissions', strungSubmissions);
+
+    // console.log('submissions', submissions);
 });
