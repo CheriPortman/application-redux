@@ -19,14 +19,19 @@ for(let i = 0; i < allSubmits.length; i++) {
 
     //a.href a is the constant, href is the property
     //decodeURIComponent() converts name string to browswer-speak
-    a.href = 'list.html?name=' + decodeURIComponent(allSubmits[i].name);
-
-    console.log ('a.href', a.href);
+    a.href = 'review.html?name=' + decodeURIComponent(allSubmits[i].name);
+    a.textContent = allSubmits[i].name;
+    console.log ('a.href', a.href, a.textContent);
 
     nameTD.textContent = allSubmits[i].name;
     wishNameTD.textContent = allSubmits[i].wishName;
     
+    nameCell.appendChild(a);
+    tr.appendChild(nameCell);  //this JUST makes the nameCell, doesn't append to the row.
+    //this is just the first cell in the new row.
+
     tableListNode.appendChild(newRow);
+    newRow.appendChild(nameCell);
     newRow.appendChild(nameTD);
     newRow.appendChild(wishNameTD);
 
