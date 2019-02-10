@@ -14,13 +14,16 @@ dd {
     color: #f9f2e7;
 }
 
+#redirect-button {
+    margin: auto;
+    width: 50vw;
+}
+
 #redirect-button a {
     background-color: #aee239;
     padding: 5px;
-    margin: 30px;
     border: 2px solid black;
     border-radius: 5px;
-    /* color: rgb(144, 107, 89); */
     color: black;
     text-decoration: none;
 }
