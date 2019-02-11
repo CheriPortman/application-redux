@@ -15,8 +15,7 @@ for(let i = 0; i < allSubmits.length; i++) {
 
     a.href = 'review.html?name=' + decodeURIComponent(allSubmits[i].name);
     a.textContent = allSubmits[i].name;
-    
-    // nameTD.textContent = allSubmits[i].name;
+
     wishNameTD.textContent = allSubmits[i].wishName;
     
     nameCell.appendChild(a);
@@ -24,18 +23,5 @@ for(let i = 0; i < allSubmits.length; i++) {
 
     tableListNode.appendChild(newRow);
     newRow.appendChild(nameCell);
-    // newRow.appendChild(nameTD);
     newRow.appendChild(wishNameTD);
-
-    console.log('index name', [i], 'a.href', a.href);
 }
-
-//Once I get a list, I need to make the name value into an anchor 
-    //ultimately, I want this to be the tag:
-    //   <a href='window.location=/list.html?name=' "
-
-
-
-//send user to the user detail
-
-//then it's done!

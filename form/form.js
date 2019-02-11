@@ -3,9 +3,7 @@ const wishName = document.getElementById('wish-name');
 
 let submissions = [] ;
 
-document.addEventListener('submit', function(event) {
-    // event.preventDefault();
-    
+document.addEventListener('submit', function() {
     const submission = {
         name: name.value,
         wishName: wishName.value

@@ -12,8 +12,6 @@ if(jsonSubmissions) {
 const searchParam = new URLSearchParams(window.location.search);
 const nameToFind = searchParam.get('name');
 
-console.log('nameToFind', nameToFind);
-
 let submission = null;
 for(let i = 0; i < submissions.length; i++) {
     if(nameToFind === submissions[i].name) {
@@ -21,6 +19,5 @@ for(let i = 0; i < submissions.length; i++) {
         break;
     }
 }
-console.log('submission', submission);
 name.textContent = submission.name;
 wishName.textContent = submission.wishName;
