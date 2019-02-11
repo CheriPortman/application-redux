@@ -6,38 +6,28 @@ const allSubmits = JSON.parse(jsonObject);
 
 for(let i = 0; i < allSubmits.length; i++) {
     const newRow = document.createElement('tr');
-    const nameTD = document.createElement('td');
+    // const nameTD = document.createElement('td');
     const wishNameTD = document.createElement('td');
     
-    //i need to construct the link for the nameCell. 
-    //make a tr element for the entire row
     const tr = document.createElement('tr');
-    //make a td element to hold the nameanchor
     const nameCell = document.createElement('td');
-    //make an a tag element to create the link with
     const a = document.createElement('a');
 
-    //a.href a is the constant, href is the property
-    //decodeURIComponent() converts name string to browswer-speak
     a.href = 'review.html?name=' + decodeURIComponent(allSubmits[i].name);
     a.textContent = allSubmits[i].name;
-    console.log ('a.href', a.href, a.textContent);
-
-    nameTD.textContent = allSubmits[i].name;
+    
+    // nameTD.textContent = allSubmits[i].name;
     wishNameTD.textContent = allSubmits[i].wishName;
     
     nameCell.appendChild(a);
-    tr.appendChild(nameCell);  //this JUST makes the nameCell, doesn't append to the row.
-    //this is just the first cell in the new row.
+    tr.appendChild(nameCell);  
 
     tableListNode.appendChild(newRow);
     newRow.appendChild(nameCell);
-    newRow.appendChild(nameTD);
+    // newRow.appendChild(nameTD);
     newRow.appendChild(wishNameTD);
 
-
-
-
+    console.log('index name', [i], 'a.href', a.href);
 }
 
 //Once I get a list, I need to make the name value into an anchor 
