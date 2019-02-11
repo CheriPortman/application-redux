@@ -3,7 +3,8 @@ const wishName = document.getElementById('wish-name');
 
 let submissions = [] ;
 
-document.addEventListener('submit', function() {
+document.addEventListener('submit', function(event) {
+    event.preventDefault();
     const submission = {
         name: name.value,
         wishName: wishName.value
@@ -21,4 +22,6 @@ document.addEventListener('submit', function() {
 
     const strungSubmissions = JSON.stringify(submissions);
     window.localStorage.setItem('submissions', strungSubmissions);
+
+    window.location = 'review.html';
 });
