@@ -1,12 +1,24 @@
 const name = document.getElementById('name');
 const wishName = document.getElementById('wish-name');
 
-//I don't want one submission. I want submissions, the array.
-const jsonSubmission = window.localStorage.getItem('submission');
-const submission = JSON.parse(jsonSubmission);
+//check to see if I have data, and if so, parse it
+const jsonSubmissions = window.localStorage.getItem('submissions');
+let submissions = [];
+if(jsonSubmissions) {
+    submissions = JSON.parse(jsonSubmissions);
+}
+//here put an else to redirect to an ooops page with a link to home
 
-name.textContent = submission.name;
-wishName.textContent = submission.wishName;
+//i have data. 
+//now I need to see find the one that matches the one I want
+//i need to search the url for the query, basically.
+
+const searchParam = new URLSearchParams(window.location.search);
+const nameToFind = searchParam.get('name');
+
+console.log('nameToFind', nameToFind);
+// name.textContent = submission.name;
+// wishName.textContent = submission.wishName;
 
 
 
